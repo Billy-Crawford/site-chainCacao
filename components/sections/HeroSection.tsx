@@ -1,3 +1,4 @@
+// components/sections/HeroSection.tsx
 "use client"
 
 import { motion } from "framer-motion"

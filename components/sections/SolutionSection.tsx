@@ -1,3 +1,4 @@
+// components/sections/SolutionSection.tsx
 import Container from "../shared/Container";
 import Link from "next/link";
 import { ShieldCheck, Link as LinkIcon, CheckCircle } from "lucide-react";

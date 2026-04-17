@@ -1,3 +1,4 @@
+// components/sections/StatsSection.tsx
 import Container from "../shared/Container"
 import StatCard from "./StatCard"
 

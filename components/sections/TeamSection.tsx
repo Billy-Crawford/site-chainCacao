@@ -1,3 +1,4 @@
+// components/sections/TeamSection.tsx
 import Container from "../shared/Container"
 import TeamCard from "./TeamCard"
 import Link from "next/link"
