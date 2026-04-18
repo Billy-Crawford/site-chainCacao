@@ -1,16 +1,15 @@
 // components/sections/HeroSection.tsx
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import Container from "../shared/Container"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Container from "../shared/Container";
 
 export default function HeroSection() {
   return (
     <section className="min-h-screen flex items-center bg-gradient-to-b from-dark to-black">
       <Container>
         <div className="text-center flex flex-col items-center gap-6">
-
           {/* Titre */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -19,7 +18,10 @@ export default function HeroSection() {
             className="text-4xl md:text-6xl font-bold leading-tight"
           >
             ChainCacao — La traçabilité blockchain
-            <span className="text-secondary"> au service des agriculteurs togolais</span>
+            <span className="text-secondary">
+              {" "}
+              au service des agriculteurs togolais
+            </span>
           </motion.h1>
 
           {/* Sous-titre */}
@@ -52,11 +54,16 @@ export default function HeroSection() {
             >
               Voir l’architecture
             </Link>
-          </motion.div>
 
+            <Link
+              href="/demo"
+              className="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition"
+            >
+              Voir la démo
+            </Link>
+          </motion.div>
         </div>
       </Container>
     </section>
-  )
+  );
 }
-
