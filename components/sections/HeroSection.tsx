@@ -1,15 +1,31 @@
-// components/sections/HeroSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Container from "../shared/Container";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-b from-dark to-black">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+
+      {/* Image de fond */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/farmer.jpg"
+          alt="Agriculteur cacao"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+      </div>
+
+      {/* Overlay sombre */}
+      <div className="absolute inset-0 bg-black/60 -z-10" />
+
       <Container>
         <div className="text-center flex flex-col items-center gap-6">
+
           {/* Titre */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -39,7 +55,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="flex gap-4 mt-4"
+            className="flex gap-4 mt-4 flex-wrap justify-center"
           >
             <Link
               href="/solution"
@@ -62,6 +78,7 @@ export default function HeroSection() {
               Voir la démo
             </Link>
           </motion.div>
+
         </div>
       </Container>
     </section>
