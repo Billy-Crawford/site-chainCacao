@@ -1,37 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 ChainCacao — Traçabilité blockchain du cacao togolais
 
-## Getting Started
+## 🚀 Présentation
 
-First, run the development server:
+**ChainCacao** est une solution innovante développée dans le cadre du **MIABE Hackathon 2026** visant à améliorer la **traçabilité, la transparence et la conformité** de la filière cacao au Togo grâce à la technologie **blockchain**.
+
+Le projet répond à un enjeu majeur : permettre aux acteurs de la chaîne de valeur (agriculteurs, coopératives, exportateurs) de disposer d’un **système fiable, vérifiable et infalsifiable**.
+
+---
+
+## 🎯 Objectifs
+
+* Assurer une **traçabilité complète** du cacao, de la production à l’export
+* Garantir l’**intégrité des données** grâce à la blockchain
+* Faciliter la **conformité aux réglementations internationales (EUDR 2025)**
+* Réduire les **fraudes et pertes économiques**
+* Améliorer la **transparence pour tous les acteurs**
+
+---
+
+## 🧠 Problématique
+
+La filière cacao souffre actuellement de :
+
+* ❌ Manque de transparence
+* ❌ Données fragmentées
+* ❌ Difficulté de vérification de l’origine
+* ❌ Faible part de valeur pour les producteurs
+* ❌ Risques de non-conformité réglementaire
+
+---
+
+## 💡 Solution proposée
+
+ChainCacao repose sur une **architecture hybride** :
+
+### 🔗 Blockchain (On-chain)
+
+* Enregistrement des transactions clés
+* Génération de **hash uniques**
+* Horodatage des événements
+* Garantie d’**immutabilité**
+
+### 🗄️ Stockage Off-chain
+
+* Données volumineuses (images, documents)
+* Informations détaillées sur les lots
+* Optimisation des performances
+
+---
+
+## ⚙️ Stack technique
+
+| Technologie             | Rôle                           |
+| ----------------------- | ------------------------------ |
+| Next.js 14 (App Router) | Framework frontend (SSR / SSG) |
+| React 18                | Composants UI                  |
+| TypeScript              | Typage statique                |
+| Tailwind CSS            | Design system                  |
+| shadcn/ui               | Composants UI                  |
+| Framer Motion           | Animations                     |
+| Lucide React            | Icônes                         |
+| Vercel                  | Déploiement                    |
+
+---
+
+## 🧩 Fonctionnalités du site vitrine
+
+* Page d’accueil immersive (Hero + storytelling)
+* Visualisation du problème (chaîne de valeur)
+* Présentation de la solution blockchain
+* Diagramme d’architecture interactif
+* Simulation du flux de traçabilité
+* Présentation de l’équipe
+* Page d’impact (ODD)
+* Page de contact
+
+---
+
+## 🖥️ Lancer le projet en local
 
 ```bash
+# Cloner le repo
+git clone https://github.com/ton-username/chaincacao-site.git
+
+# Aller dans le dossier
+cd chaincacao-site
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 Accès : http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌍 Déploiement
 
-## Learn More
+Le projet est déployé sur Vercel :
 
-To learn more about Next.js, take a look at the following resources:
+👉 https://chaincacao.vercel.app *(à adapter si besoin)*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👥 Équipe QUILL — TG-31
 
-## Deploy on Vercel
+* **NGARTOBAYE Oumarou Billy** — Chef d’équipe, Master 1 Intelligence Artificielle
+* **LARE Liman Laurentia** — Développeuse frontend
+* **KPODAR Ekoue Jean Didier** — Étudiant en cybersécurité (3e année)
+* **TCHEDRE Aboudoul-Koudouse** — Étudiant en sécurité informatique
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# site-chainCacao
+## 🌱 Impact
+
+ChainCacao contribue directement à plusieurs Objectifs de Développement Durable :
+
+* ODD 1 — Pas de pauvreté
+* ODD 2 — Faim zéro
+* ODD 8 — Travail décent
+* ODD 12 — Consommation responsable
+
+---
+
+## 🏁 Conclusion
+
+ChainCacao propose une approche technologique innovante pour moderniser la filière cacao en Afrique, en combinant **blockchain, transparence et impact social**.
+
+---
+
+## 📬 Contact
+
+📧 [chaincacao.team@gmail.com](mailto:chaincacao.team@gmail.com)
+📍 Lomé, Togo — MIABE Hackathon 2026
+
+---
