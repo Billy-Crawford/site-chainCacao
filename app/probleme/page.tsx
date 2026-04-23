@@ -1,10 +1,12 @@
 import Container from "@/components/shared/Container";
+import { User, Users, Truck, Store } from "lucide-react";
 
 export default function ProblemePage() {
   return (
     <main className="py-20">
       <Container>
-        {/* Titre */}
+
+        {/* 🧠 HEADER */}
         <div className="mb-16">
           <h1 className="text-4xl font-bold mb-4">
             Comprendre les enjeux de la filière cacao
@@ -16,47 +18,94 @@ export default function ProblemePage() {
           </p>
         </div>
 
-        {/* Contexte */}
+        {/* 🔗 CHAÎNE DE VALEUR */}
         <section className="mb-20">
           <h2 className="text-2xl font-semibold mb-6">
             Une chaîne de valeur fragmentée
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            {/* Visuel */}
-            <div className="bg-white/5 border border-white/10 rounded-xl h-64 flex items-center justify-center">
-              <p className="text-gray-400">Schéma chaîne de valeur</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            {/* 🔴 SCHÉMA */}
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-6">
+
+              {/* Agriculteur */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <User className="text-secondary" />
+                  <span>Agriculteur</span>
+                </div>
+                <span className="text-red-400 text-sm">Faible revenu</span>
+              </div>
+
+              <div className="text-center text-gray-500">↓</div>
+
+              {/* Coopérative */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Users className="text-secondary" />
+                  <span>Coopérative</span>
+                </div>
+                <span className="text-red-400 text-sm">Données fragmentées</span>
+              </div>
+
+              <div className="text-center text-gray-500">↓</div>
+
+              {/* Exportateur */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Truck className="text-secondary" />
+                  <span>Exportateur</span>
+                </div>
+                <span className="text-red-400 text-sm">Manque de traçabilité</span>
+              </div>
+
+              <div className="text-center text-gray-500">↓</div>
+
+              {/* Acheteur */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Store className="text-secondary" />
+                  <span>Acheteur final</span>
+                </div>
+                <span className="text-green-400 text-sm">Valeur maximale</span>
+              </div>
+
             </div>
 
-            {/* Texte */}
-            <div className="text-gray-300 space-y-4">
+            {/* 📝 TEXTE */}
+            <div className="text-gray-300 space-y-5">
               <p>
                 La production de cacao repose sur un réseau complexe d’acteurs :
                 agriculteurs, coopératives, exportateurs et intermédiaires.
               </p>
 
               <p>
-                Cette multiplicité d’intervenants rend difficile la traçabilité
-                des produits et favorise les asymétries d’information.
+                À chaque étape, les informations sont partiellement perdues ou
+                mal transmises, ce qui crée une rupture dans la traçabilité.
               </p>
 
               <p>
-                En conséquence, les producteurs captent une faible part de la
-                valeur finale, tandis que les risques de fraude et de
-                non-conformité augmentent.
+                Ce manque de transparence empêche une vérification fiable de
+                l’origine du cacao et fragilise toute la chaîne de valeur.
+              </p>
+
+              <p className="text-secondary font-medium">
+                → Plus on avance dans la chaîne, plus la valeur augmente, mais moins la transparence est garantie.
               </p>
             </div>
+
           </div>
         </section>
 
-        {/* Données */}
+        {/* 📊 DONNÉES */}
         <section className="mb-20">
           <h2 className="text-2xl font-semibold mb-6">
             Données clés de la filière
           </h2>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border border-white/10">
+          <div className="overflow-x-auto rounded-xl border border-white/10">
+            <table className="w-full">
               <thead className="bg-white/5">
                 <tr>
                   <th className="p-4 text-left">Indicateur</th>
@@ -89,44 +138,43 @@ export default function ProblemePage() {
           </div>
         </section>
 
-        {/* EUDR */}
+        {/* 🏛️ EUDR */}
         <section className="mb-20">
           <h2 className="text-2xl font-semibold mb-6">
             Impact du règlement EUDR
           </h2>
 
           <div className="space-y-6">
-            <div className="border-l-2 border-secondary pl-4">
-              <h3 className="font-semibold">2023</h3>
-              <p className="text-gray-400">
-                Adoption du règlement européen contre la déforestation.
-              </p>
-            </div>
-
-            <div className="border-l-2 border-secondary pl-4">
-              <h3 className="font-semibold">2024</h3>
-              <p className="text-gray-400">
-                Phase de préparation et d’adaptation des acteurs.
-              </p>
-            </div>
-
-            <div className="border-l-2 border-secondary pl-4">
-              <h3 className="font-semibold">2025</h3>
-              <p className="text-gray-400">
-                Entrée en vigueur obligatoire pour les exportations.
-              </p>
-            </div>
+            {[
+              {
+                year: "2023",
+                text: "Adoption du règlement européen contre la déforestation.",
+              },
+              {
+                year: "2024",
+                text: "Phase de préparation et d’adaptation des acteurs.",
+              },
+              {
+                year: "2025",
+                text: "Entrée en vigueur obligatoire pour les exportations.",
+              },
+            ].map((item) => (
+              <div key={item.year} className="border-l-2 border-secondary pl-4">
+                <h3 className="font-semibold">{item.year}</h3>
+                <p className="text-gray-400">{item.text}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Benchmark */}
+        {/* ⚖️ BENCHMARK */}
         <section>
           <h2 className="text-2xl font-semibold mb-6">
             Benchmark des solutions existantes
           </h2>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border border-white/10">
+          <div className="overflow-x-auto rounded-xl border border-white/10">
+            <table className="w-full">
               <thead className="bg-white/5">
                 <tr>
                   <th className="p-4">Critère</th>
@@ -157,6 +205,7 @@ export default function ProblemePage() {
             </table>
           </div>
         </section>
+
       </Container>
     </main>
   );

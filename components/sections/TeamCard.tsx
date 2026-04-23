@@ -22,3 +22,4 @@ export default function TeamCard({ name, role, description }: Props) {
     </div>
   )
 }
+
