@@ -38,7 +38,8 @@ export default function Footer() {
               Développé dans le cadre du MIABE Hackathon 2026.
             </p>
             <p className="text-sm text-gray-400 mt-2">
-              Équipe QUILL · TG-31 · Lomé, Togo
+              Équipe QUILL · TG-31 · Lomé, Togo <br />
+              billy6joecobra@gmail.com
             </p>
           </div>
 
